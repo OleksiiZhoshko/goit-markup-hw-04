@@ -5,6 +5,7 @@
     --accent-color: #2196F3;
     --black-color: #000000;
     --white-color: #ffffff;
+    --icons-color: #AFB1B8;
     --foter-color: rgba(255, 255, 255, 0.6);
 
     /* background color */
@@ -141,7 +142,9 @@ img {
 
 /* contacts */
 
-
+.contacts-icons {
+    fill: currentColor;
+}
 
 .contacts-link:hover,
 .contacts-link:focus {
@@ -171,16 +174,26 @@ section {
 
 /* Herroy */
 
-.hero {
-    background-color: var(--accent-bg-cl);
-}
-
 .hero-section {
+    background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../img/bg-Img-hero.jpg);
+    background-color: #C4C4C4; 
+    border: 1px solid var(--black-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin: 0 auto;
+    
 }
 
 .hero-container {
+    
     display: flex;
     flex-direction: column;
 }
@@ -205,7 +218,7 @@ section {
     font-size: 16px;
     line-height: calc(30/16);
     align-items: center;
-    text-align: center;
+    text-align: inherit;
     letter-spacing: 0.06em;
     border: none;
     border-radius: 4px;
@@ -232,6 +245,15 @@ section {
 .scils-list {
     display: flex;
     gap: 30px;
+}
+
+.scils-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
 }
 
 .scils-link {
@@ -292,11 +314,69 @@ section {
     font-size: 16px;
     line-height: calc(19 / 16);
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .teem-card-box {
     padding: 30px 10px;
 }
+
+.teem-icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.teem-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%; 
+    color: var(--icons-color);  
+}
+
+.teem-icon-link:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+.teem-icons {
+ fill: currentColor;
+}
+
+/* clients */
+
+.clients-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;    
+}
+
+.clients-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;    
+    color: var(--icons-color);
+    border: 1px solid var(--icons-color);
+    border-radius: 4%;    
+}
+
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.clients-icons {
+    fill: currentColor;
+}
+
 
 /* footer */
 
@@ -305,7 +385,11 @@ section {
     padding-bottom: 60px;
     background-color: var(--accent-bg-cl);
 }
-
+ 
+.footer-conteiner {
+    display: flex;
+    align-items: baseline;
+}
 
 .address {
     margin-top: 20px;
@@ -323,6 +407,47 @@ section {
 
 .map {
     color: var(--white-color);
+}
+
+.social {
+    margin-left: 70px;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height:calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;    
+    color: var(--white-color);
+}
+
+.footer-icon-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;    
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+    background-color: var(--accent-color);
+}    
+
+.footer-icons {    
+    fill: currentColor;
 }
 
 /* portfolio */
@@ -362,10 +487,17 @@ section {
 }
 
 /* projects */
+
+.projects-item:hover,
+.projects-item:focus {
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .container-projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 28px;
 }
 
 .projects-wrapper {
@@ -373,8 +505,8 @@ section {
     padding-top: 20px;
     border: 1px solid #EEEEEE;
     border-top: none;
-    padding-left: 23px;
-    padding-right: 23px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .projects-title {
